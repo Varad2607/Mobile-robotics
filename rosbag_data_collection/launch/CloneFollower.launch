@@ -1,0 +1,8 @@
+<launch>
+   <arg name="follow_offset" default="1.5"/>
+   <arg name="force_in_bounds" default="True"/>
+   <node pkg="assignment2" type="CloneFollower.py" name="clone_follower" output="screen">
+      <param name="follow_offset" type="double" value="$(arg follow_offset)"/>
+      <param name="force_in_bounds" type="bool" value="$(arg force_in_bounds)"/>
+   </node>
+</launch>

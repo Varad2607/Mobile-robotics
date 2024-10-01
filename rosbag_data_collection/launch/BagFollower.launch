@@ -1,0 +1,8 @@
+<launch>
+  <arg name="bag_path" default="/home/robot/mushr_ws/src/mushr545/assignment2/rosbags/simulation_figure_8_rosbag.bag" />
+  <arg name="follow_backwards" default="False" />
+  <node name="bag_follower" pkg="assignment2" type="BagFollower.py" output="screen">
+    <param name="bag_path" type="string" value="$(arg bag_path)" />
+    <param name="follow_backwards" type="bool" value="$(arg follow_backwards)" />
+  </node>
+</launch>
