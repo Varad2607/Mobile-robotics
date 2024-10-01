@@ -1,0 +1,15 @@
+<launch>
+	<param name="compute_time" value="0.09" />
+    <param name="speed" value="0.5" />
+	<param name="dt" value="0.11" />
+	<arg name="T" default="194" />
+	<param name="min_delta" value="-0.24" />
+	<param name="max_delta" value="0.241" />
+	<arg name="traj_nums" default="5" />
+	<arg name="laser_offset" default="0.28" />
+  	<node pkg="assignment-3-team-6" type="laser_wanderer.py" name="laser_wanderer" required="true" output="screen" >
+		<param name="T" value="$(arg T)" />
+		<param name="traj_nums" value="$(arg traj_nums)" />
+		<param name="laser_offset" value="$(arg laser_offset)" />
+	</node>
+</launch>

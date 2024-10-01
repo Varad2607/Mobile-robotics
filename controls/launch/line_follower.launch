@@ -1,0 +1,65 @@
+<launch>
+
+    <arg name="plan_lookahead" default="5" />
+    <arg name="translation_weight" default="1.0" />
+    <arg name="rotation_weight" default="0.5" />
+    <arg name="kp" default="0.9" />
+    <arg name="ki" default="0.6" />
+    <arg name="kd" default="0.05" />
+    <arg name="error_buff_length" default="10" />
+
+    <node name="line_follower" pkg="assignment-3-team-6" type="line_follower.py" output="screen">
+        <param name="plan_lookahead" value="$(arg plan_lookahead)" />
+        <param name="translation_weight" value="$(arg translation_weight)" />
+        <param name="rotation_weight" value="$(arg rotation_weight)" />
+        <param name="kp" value="$(arg kp)" />
+        <param name="ki" value="$(arg ki)" />
+        <param name="kd" value="$(arg kd)" />
+        <param name="error_buff_length" value="$(arg error_buff_length)" />
+    </node>
+
+</launch>
+
+<!-- <launch>
+
+    <arg name="plan_lookahead" default="8" />
+    <arg name="translation_weight" default="1.0" />
+    <arg name="rotation_weight" default="0.5" />
+    <arg name="kp" default="1.9" />
+    <arg name="ki" default="1.2" />
+    <arg name="kd" default="0.4" />
+    <arg name="error_buff_length" default="10" />
+
+    <node name="line_follower" pkg="assignment-3-team-6" type="line_follower.py" output="screen">
+        <param name="plan_lookahead" value="$(arg plan_lookahead)" />
+        <param name="translation_weight" value="$(arg translation_weight)" />
+        <param name="rotation_weight" value="$(arg rotation_weight)" />
+        <param name="kp" value="$(arg kp)" />
+        <param name="ki" value="$(arg ki)" />
+        <param name="kd" value="$(arg kd)" />
+        <param name="error_buff_length" value="$(arg error_buff_length)" />
+    </node>
+
+</launch> -->
+
+<!-- <launch>
+
+    <arg name="plan_lookahead" default="5" />
+    <arg name="translation_weight" default="1.0" />
+    <arg name="rotation_weight" default="0.5" />
+    <arg name="kp" default="2.7" />
+    <arg name="ki" default="1.8" />
+    <arg name="kd" default="0.6" />
+    <arg name="error_buff_length" default="20" />
+
+    <node name="line_follower" pkg="assignment-3-team-6" type="line_follower.py" output="screen">
+        <param name="plan_lookahead" value="$(arg plan_lookahead)" />
+        <param name="translation_weight" value="$(arg translation_weight)" />
+        <param name="rotation_weight" value="$(arg rotation_weight)" />
+        <param name="kp" value="$(arg kp)" />
+        <param name="ki" value="$(arg ki)" />
+        <param name="kd" value="$(arg kd)" />
+        <param name="error_buff_length" value="$(arg error_buff_length)" />
+    </node>
+
+</launch> -->
